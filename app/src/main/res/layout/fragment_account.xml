@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.AccountFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="24dp"
+                android:background="#e5e5e5"
+                android:contentDescription="Separator"
+                app:layout_constraintTop_toBottomOf="@id/txtEditProfile" />
+
+            <ImageView
+                android:id="@+id/imgSeparator1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e5e5e5"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Separator"
+                app:layout_constraintTop_toBottomOf="@id/txtSpecificEmailAccount" />
+
+            <ImageView
+                android:id="@+id/imgSeparator3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e5e5e5"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Separator"
+                app:layout_constraintTop_toBottomOf="@id/txtSpecificContact" />
+
+            <ImageView
+                android:id="@+id/imgSeparator2"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#e5e5e5"
+                android:contentDescription="Separator"
+                app:layout_constraintTop_toBottomOf="@id/txtSpecificInstagram" />
+
+            <ImageView
+                android:id="@+id/imgSeparator2_1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e5e5e5"
+                android:contentDescription="Separator"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/txtSpecificNamaAccount" />
+
+            <TextView
+                android:id="@+id/txtEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Edit Foto Profile"
+                android:textColor="#0086ED"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgProfile" />
+
+            <TextView
+                android:id="@+id/txtInfoAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@android:color/black"
+                android:text="Informasi Akun"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgSeparator" />
+
+            <TextView
+                android:id="@+id/txtEditAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp"
+                android:text="Edit"
+                android:textColor="#EEAA54"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgSeparator" />
+
+            <TextView
+                android:id="@+id/txtContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_person_black_24dp"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="No. Handphone"
+                android:textSize="18sp"
+                android:drawableTint="#868686"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgSeparator1" />
+
+            <TextView
+                android:id="@+id/txtSpecificContact"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="+6282145860636"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="viewEnd"
+                app:layout_constraintTop_toBottomOf="@id/imgSeparator1" />
+
+            <TextView
+                android:id="@+id/txtInstagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_instagram"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="Instagram"
+                android:textSize="18sp"
+                android:drawableTint="#868686"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgSeparator3" />
+
+            <TextView
+                android:id="@+id/txtSpecificInstagram"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="irrvan_"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="viewEnd"
+                app:layout_constraintTop_toBottomOf="@id/imgSeparator3" />
+
+            <TextView
+                android:id="@+id/txtNamaAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_person_black_24dp"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="Nickname"
+                android:textSize="18sp"
+                android:drawableTint="#868686"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtEditAccount" />
+
+            <TextView
+                android:id="@+id/txtSpecificNamaAccount"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Irvan Adi Santoso"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="viewEnd"
+                app:layout_constraintTop_toBottomOf="@id/txtEditAccount" />
+
+            <TextView
+                android:id="@+id/txtEmailAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_email_black_24dp"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="Email"
+                android:drawableTint="#868686"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSpecificNamaAccount" />
+
+            <TextView
+                android:id="@+id/txtSpecificEmailAccount"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="irvanxeno@gmail.com"
+                android:drawableTint="#e5e5e5"
+                android:textSize="18sp"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSpecificNamaAccount"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/dpanji"
+                app:civ_border_color="#fff"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/txtAlamatAccount"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Alamat"-->
+<!--                android:textSize="18sp"-->
+<!--                android:drawableTint="#868686"-->
+<!--                android:drawablePadding="8dp"-->
+<!--                android:drawableStart="@drawable/ic_address"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/imgSeparator1"-->
+<!--                android:padding="16dp"/>-->
+            <TextView
+                android:id="@+id/txtLogOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#ff453a"
+                android:text="Logout"
+                app:layout_constraintTop_toBottomOf="@id/imgSeparator2"
+                android:padding="16dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

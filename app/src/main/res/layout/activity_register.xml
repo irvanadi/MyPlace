@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Activities.RegisterActivity">
+
+    <EditText
+        android:id="@+id/edNickname"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:drawableTint="#00beed"
+        android:drawableStart="@drawable/ic_account_circle_black_24dp"
+        android:drawablePadding="16dp"
+        android:paddingStart="16dp"
+        android:hint="Nama Panggilan"
+        android:paddingEnd="16dp"
+        android:background="#F3F3F3"
+        android:singleLine="true"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edEmail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:drawableTint="#00beed"
+        android:drawableStart="@drawable/ic_mail_black_24dp"
+        android:drawablePadding="16dp"
+        android:paddingStart="16dp"
+        android:hint="Email"
+        android:paddingEnd="16dp"
+        android:background="#F3F3F3"
+        android:singleLine="true"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/edNickname"/>
+
+    <EditText
+        android:id="@+id/edContact"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:drawableTint="#00beed"
+        android:drawableStart="@drawable/ic_phone_black_24dp"
+        android:drawablePadding="16dp"
+        android:paddingStart="16dp"
+        android:hint="Contact"
+        android:paddingEnd="16dp"
+        android:background="#F3F3F3"
+        android:singleLine="true"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/edEmail"/>
+
+    <EditText
+        android:id="@+id/edInstagram"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:drawableTint="#00beed"
+        android:drawableStart="@drawable/ic_instagram"
+        android:drawablePadding="16dp"
+        android:paddingStart="16dp"
+        android:hint="Instagram"
+        android:paddingEnd="16dp"
+        android:background="#F3F3F3"
+        android:singleLine="true"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/edContact"/>
+
+    <EditText
+        android:id="@+id/edPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:drawableTint="#00beed"
+        android:drawableStart="@drawable/ic_vpn_key_black_24dp"
+        android:drawablePadding="16dp"
+        android:paddingStart="16dp"
+        android:hint="Password"
+        android:paddingEnd="16dp"
+        android:background="#F3F3F3"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/edInstagram"/>
+
+    <EditText
+        android:id="@+id/edConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:drawableTint="#00beed"
+        android:drawableStart="@drawable/ic_vpn_key_black_24dp"
+        android:drawablePadding="16dp"
+        android:paddingStart="16dp"
+        android:hint="Confrim Password"
+        android:paddingEnd="16dp"
+        android:background="#F3F3F3"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/edPassword"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#00beed"
+        android:text="Register"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/edConfirm"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

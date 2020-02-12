@@ -1,0 +1,231 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/dpanji"
+            app:contentScrim="?attr/colorPrimaryDark"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="24dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:src="@drawable/ic_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lihat peta"
+                android:typeface="sans"
+                android:focusable="true"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="@+id/imgMap"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/imgMap"
+                app:layout_constraintTop_toBottomOf="@id/imgMap" />
+
+            <TextView
+                android:id="@+id/txtTitleItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Nama Cafe"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@id/txtMap"
+                app:layout_constraintTop_toTopOf="@id/imgMap" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Jl. Ngagel Raya Selatan"
+                app:layout_constraintEnd_toStartOf="@id/guideAddress"
+                app:layout_constraintStart_toStartOf="@id/txtTitleItem"
+                app:layout_constraintTop_toBottomOf="@id/txtTitleItem" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <View
+                android:id="@+id/viewSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/grey"
+                app:layout_constraintTop_toBottomOf="@id/txtAddress" />
+
+            <TextView
+                android:id="@+id/txtFacility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Detail"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewSeparator" />
+
+            <TextView
+                android:id="@+id/txtAvgPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Harga Rata - Rata"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtFacility" />
+
+            <TextView
+                android:id="@+id/txtFavoriteFoods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Makanan / Minuman Favorit "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtAvgPrice" />
+
+            <TextView
+                android:id="@+id/txtDetailAvgPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text=": Rp 12.000 - Rp 15.000"
+                app:layout_constraintStart_toEndOf="@id/txtFavoriteFoods"
+                app:layout_constraintTop_toBottomOf="@id/txtFacility" />
+
+            <TextView
+                android:id="@+id/txtDetailFavoriteFoods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text=": Es Teh"
+                app:layout_constraintStart_toEndOf="@id/txtFavoriteFoods"
+                app:layout_constraintTop_toBottomOf="@id/txtAvgPrice" />
+
+            <View
+                android:id="@+id/viewSeparator2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/grey"
+                app:layout_constraintTop_toBottomOf="@id/txtFavoriteFoods" />
+
+            <TextView
+                android:id="@+id/txtReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Review"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewSeparator2" />
+
+            <TextView
+                android:id="@+id/txtAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text=""
+                android:textSize="16sp"
+                android:typeface="sans"
+                app:layout_constraintEnd_toEndOf="@id/guideDescription"
+                app:layout_constraintTop_toBottomOf="@id/viewSeparator2" />
+
+            <TextView
+                android:id="@+id/txtDetailReview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Kunjungi Hard Rock Hotel Singapore yang baru, di mana energi dan pesona berpadu dengan desain kontemporer terkini. Datang sekarang untuk menikmati pengalaman bersantap malam, hiburan, dan fasilitas baru yang akan membuat Anda merasa seperti rocker papan atas. Kami hanya beberapa menit dari tempat menarik yang ada di kawasan ini, termasuk Universal Studios Singapore®, S.E.A. Aquarium™ dan Adventure Cove Waterpark™ serta spa flagship di Asia - ESPA yang terkenal di dunia."
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintEnd_toEndOf="@id/guideDescription"
+                app:layout_constraintStart_toStartOf="@id/txtReview"
+                app:layout_constraintTop_toBottomOf="@id/txtReview" />
+
+            <View
+                android:id="@+id/viewSeparator3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/grey"
+                app:layout_constraintTop_toBottomOf="@id/txtDetailReview" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
